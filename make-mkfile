@@ -1,0 +1,18 @@
+CC = gcc
+SRC = cJSON mkfile stix util
+INC = include
+LIB = -Llib -L/usr/lib64/ -ldl -lpthread -lm -lz -lpcre
+OBJS = $(addsuffix .o, $(SRC))
+TARGET = mkfile
+
+all: $(OBJS)
+	$(CC) -g -o $(addprefix bin/, $(TARGET)) $(addprefix obj/, $(OBJS)) $(LIB)
+origin: $(OBJS)
+	$(CC) -g -o $(addprefix bin/, $(TARGET)) $(addprefix obj/, $(OBJS)) $(LIB)
+%.o: $(addprefix src/, %.c)
+	$(CC) -g -c -Wall $< -I$(INC) -o $(addprefix obj/, $@)
+clean:
+	rm -rf obj/* bin/* lib/*
+install: all
+	rm -rf /usr/local/bin/$(TARGET)
+	cp bin/$(TARGET) /usr/local/bin/
