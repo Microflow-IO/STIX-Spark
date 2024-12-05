@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  uniwaf:
+    image: registry.jxit.net.cn:5000/microflow/stix-spark:git-7
+    container_name: unistix
+    environment:
+      LISTEN_PORT: 15155
+      OUTPUT: 127.0.0.1:12201
+    command:
+    - "sh"
+    - "-xc"
+    - | 
+      unistix -a -l $${LISTEN_PORT} -s $${OUTPUT} -p 127.0.0.1
+      sleep 88888888888888
