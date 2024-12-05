@@ -103,6 +103,8 @@ Enter container check test data and script, sending test-unistix.json to port 15
 root@jxcloud-dev:/tmp/STIX-Spark# docker exec -it unistix sh
 /unistix/stix-all # ps aux | grep unistix
 7 root      0:00 unistix -l 15155 -m stix-file/result -s 127.0.0.1:12201 -p 127.0.0.1 -r
+```
+```bash
 /unistix/stix-all # cd /usr/src/unistix/
 /usr/src/unistix # cat test-stix.json 
 {"BEGIN_TIME":"2024-06-12 15:00:00","SRC_IP":"192.168.1.12","DST_IP":"222.136.170.15","FORWARD":"32.23.65.32","RETCODE":"200","SRC_PORT":"20034","DST_PORT":"39361","REQ_HEADER":"/index.html","REQ_BODY":"aaaaaaaaaaa","RSP_HEADER":"HTTP 200 OK\r\n","RSP_BODY":"HTTP 200 OK\r\n","URL":"111/vadosaj.getenjoyment.net/92034677522.pdf","METHOD":"GET","L7_PROTOCOL":"http","message":"cccccccc","DOMAIN":"ipswich.able-plumbing.co.uk"}
