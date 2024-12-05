@@ -11,5 +11,4 @@ services:
     - "sh"
     - "-xc"
     - | 
-      unistix -a -l $${LISTEN_PORT} -s $${OUTPUT} -p 127.0.0.1
-      sleep 88888888888888
+      unistix -l $${LISTEN_PORT} -m stix-file/result -s $${OUTPUT} -p 127.0.0.1 -r
