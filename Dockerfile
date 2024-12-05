@@ -25,5 +25,6 @@ ADD stix-all.tar.gz /unistix
 
 WORKDIR /unistix/stix-all
 
+COPY --from=builder /unistix /usr/src/unistix
 COPY --from=builder /usr/local/bin/unistix /usr/local/bin/unistix
 COPY --from=builder /usr/local/bin/mkfile /usr/local/bin/mkfile
