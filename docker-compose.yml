@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   uniwaf:
-    image: registry.jxit.net.cn:5000/microflow/stix-spark:git-7
+    image: registry.jxit.net.cn:5000/microflow/stix-spark:git-9
     container_name: unistix
     environment:
       LISTEN_PORT: 15155
