@@ -11,7 +11,7 @@ WORKDIR /unistix
 
 COPY . /unistix
 
-RUN mkdir obj && make install && make -f make-mkfile install
+RUN mkdir obj && mkdir bin && make install && make -f make-mkfile install
 
 FROM registry.jxit.net.cn:5000/alpine:3.19.1
 
